@@ -6732,3 +6732,148 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-01-30 16:00:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 369ms (Views: 349.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-01-30 16:03:28 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-01-30 16:03:32 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mnuuTH1egAiPUndu3nlieIdV58caUZDVEn0nJ/39ZBLD6l7euGGLImYj349ZFTRT9YmA+7Iy294n4Aa0GlVaUg==", "post"=>{"title"=>"T-t-t-title", "description"=>"D-d-d-description!!"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "T-t-t-title"], ["description", "D-d-d-description!!"], ["created_at", "2019-01-30 23:03:32.976456"], ["updated_at", "2019-01-30 23:03:32.976456"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/15
+Completed 200 OK in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/15" for ::1 at 2019-01-30 16:03:32 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-01-30 16:05:32 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-01-30 16:05:46 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"17sikEIjdVVpxwi6hV9cKp1hsqd6FKWwm3QrLrgfM4COKtIChxx+f4C2oFsCMwoB773Vm9J37ruu6Qq9X7cNwA==", "post"=>{"title"=>"?", "description"=>"!"}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "?"], ["description", "!"], ["created_at", "2019-01-30 23:05:46.392266"], ["updated_at", "2019-01-30 23:05:46.392266"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/16
+Completed 200 OK in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/16" for ::1 at 2019-01-30 16:05:46 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-01-30 16:10:30 -0700
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for ::1 at 2019-01-30 16:12:06 -0700
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"76oRerGThqdwHeIgr6+LT222cf+PapqG3LPQw0GNOnW2O+HodKyNjZlsSsEow91kH2oWwycJ0Y3pLvFQpiUENQ==", "post"=>{"title"=>"你好！", "description"=>"这个是很好。"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "你好！"], ["description", "这个是很好。"], ["created_at", "2019-01-30 23:12:06.578277"], ["updated_at", "2019-01-30 23:12:06.578277"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 201 Created in 41ms (Views: 35.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for ::1 at 2019-01-30 16:12:26 -0700
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/_post.html.erb (0.9ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (1.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.9ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/index.html.erb within layouts/application (47.4ms)
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/17/post_data" for ::1 at 2019-01-30 16:12:33 -0700
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+Completed 200 OK in 27ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/17/post_data" for ::1 at 2019-01-30 16:12:33 -0700
+Processing by PostsController#post_data as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/17" for ::1 at 2019-01-30 16:12:34 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/18.json" for ::1 at 2019-01-30 16:12:36 -0700
+Processing by PostsController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=18):
+  app/controllers/posts_controller.rb:43:in `set_post'
+
+
+  Rendered /Users/juliannatetreault/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/juliannatetreault/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/juliannatetreault/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/juliannatetreault/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (77.0ms)
+
+
+Started GET "/posts/17" for ::1 at 2019-01-30 16:12:37 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
